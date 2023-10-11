@@ -1,0 +1,14 @@
+body {
+    background-color: #CA3F3A;
+}
+
+header{
+    font-family: Formula1;
+    font-weight: 900;
+    color:yellow ;
+}
+
+img.HomeImage{
+    max-height: 100%;
+    max-width: 100%;
+}
