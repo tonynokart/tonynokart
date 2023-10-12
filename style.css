@@ -1,14 +1,38 @@
 body {
+    margin: 0;
+    padding: 0;
     background-color: #CA3F3A;
 }
 
+p {
+    font-family: Helvetica-Neue;
+}
+
 header{
-    font-family: Formula1;
-    font-weight: 900;
+    font-family: Formula1-Bold;
+    font-weight: 1000;
+    font-size: 100px;
     color:yellow ;
 }
 
-img.HomeImage{
-    max-height: 100%;
-    max-width: 100%;
+@font-face {
+    font-family: Formula1-Bold;
+    font-weight: bold;
+    src: url("assets/Formula1-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Helvetica-Neue;
+    src: url("assets/HelveticaNeueRegular.otf");
+}
+
+.HomeImage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('assets/HomeImage.jpg');
+    background-size: cover;
+    background-position: 20%;
+    width: 100%;
+    height: 100%;
 }
