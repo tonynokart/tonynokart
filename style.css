@@ -1,24 +1,4 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #CA3F3A;
-}
-
-p {
-    font-family: Helvetica-Neue;
-}
-
-div.scrolling_text{
-    
-    font-family: Formula1-Bold;
-    font-weight: 1000;
-    font-size: 5rem;
-    color:yellow ;
-    object-fit: cover;
-    text-overflow: string;
-    white-space: nowrap;
-}
-
+/* calling different fonts */
 @font-face {
     font-family: Formula1-Bold;
     font-weight: bold;
@@ -32,11 +12,52 @@ div.scrolling_text{
 
 
 
-.HomeImage{
-    background-image: url('assets/HomeImage.jpg');
-    background-position: center;
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #CA3F3A;
+}
+
+p {
+    font-family: Helvetica-Neue;
+}
+
+a {
+    font-family: Helvetica-Neue;
+    font-size: 1.5rem;
+    color: white;
+}
+
+/*for all scrolling texts on screen, missing the scrolling part*/
+div.scrolling_text{
+    font-family: Formula1-Bold;
+    font-weight: 1000;
+    font-size: 5rem;
+    color:yellow ;
+    white-space: nowrap;
+}
+
+
+
+.HomeContainer{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.menu{
+    top: 1rem;
+    right: 1 rem;
     position: absolute;
-    max-width: 100%;
+    white-space: nowrap;
+}
+
+
+/*need to get display of home image in the right position, with height beign the height of the display*/
+.HomeImage{
+    background-position: center;
+    max-height: 100%;
     object-fit: cover;
     width: auto;
     height: 100%;
