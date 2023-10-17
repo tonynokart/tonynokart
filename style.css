@@ -10,13 +10,22 @@
     src: url("assets/HelveticaNeueRegular.otf");
 }
 
-
+@keyframes RightToLeft { /*animation function for the sliding text*/
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-33.9%);/*This weird number is where the cycle restarts
+        and is linked to the lenght of the text in index.html at line 26. */
+    }
+}
 
 
 body {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     background-color: #CA3F3A;
+    overflow-x: hiddn;
 }
 
 p {
@@ -26,51 +35,57 @@ p {
 a {
     font-family: Helvetica-Neue;
     font-size: 1.5rem;
-    color: white;
 }
 
 /*for all scrolling texts on screen, missing the scrolling part*/
-div.scrolling_text{
-    font-family: Formula1-Bold;
-    font-weight: 1000;
-    font-size: 5rem;
-    color:yellow ;
-    white-space: nowrap;
-}
 
-
-
-.HomeContainer{
-    position: relative;
-    text-align: center;
-    color: white;
-}
 
 .menu{
     top: 1rem;
     right: 1 rem;
     position: absolute;
     white-space: nowrap;
+    color:  #CA3F3A;
 }
 
-
-/*need to get display of home image in the right position, with height beign the height of the display*/
-.HomeImage{
-    background-position: center;
-    max-height: 100%;
+.HomeStuff{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
     object-fit: cover;
-    width: auto;
-    height: 100%;
-    overflow: hidden;
+
 }
 
-.overlay_text{
+.HomeImage{
+    background: url('/assets/HomeImage.jpg');
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position-x: 50%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.overlay_text{ /*parent*/
+    font-family: Formula1-Bold;
+    font-weight: 1000;
+    font-size: 5rem;
+    color:yellow ;
+    white-space: nowrap;
     position: absolute;
     top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);  
+    left: 0%;
     text-align: center;
 }
+
+.scrolling_text{ /*child*/
+    animation: RightToLeft 10s linear infinite ; /*change number 10 here to 
+    increase/decrease speed of animation*/
+}
+
+
+
+
 
 .logo{
     width: 100%;
