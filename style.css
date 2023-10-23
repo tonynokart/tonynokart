@@ -11,9 +11,6 @@
 }
 
 @keyframes RightToLeft { /*animation function for the sliding text*/
-    from {
-        transform: translateX(0%);
-    }
     to {
         transform: translateX(-33.9%);/*This weird number is where the cycle restarts
         and is linked to the lenght of the text in index.html at line 26. */
@@ -37,15 +34,16 @@ a {
     font-size: 1.5rem;
 }
 
-/*for all scrolling texts on screen, missing the scrolling part*/
-
 
 .menu{
+    width: 100%;
     top: 1 rem;
     right: 1 rem;
     position: absolute;
     white-space: nowrap;
-    color:  #CA3F3A;
+    color:  #CA3F3A; 
+
+    outline: 3px solid lime;
 }
 
 .HomeStuff{
@@ -75,9 +73,12 @@ a {
     top: 50%; 
     left: 0%;
     text-align: center;
+
+    outline: 3px solid red;
 }
 
 .scrolling_text{ /*child*/
+    width: max-content;
     animation: RightToLeft 10s linear infinite ; /*change number 10 here to 
     increase/decrease speed of animation*/
 }
