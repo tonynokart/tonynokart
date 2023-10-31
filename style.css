@@ -18,7 +18,7 @@
 }
 
 
-body {
+.aboutUsSection {
     margin: 0px;
     padding: 0px;
     background-color: #CA3F3A;
@@ -41,7 +41,8 @@ header{
 }
 
 .desktop{
-
+    display: inline;
+    float: right;
 }
 
 .mobile{
@@ -54,6 +55,7 @@ header{
 .HomeStuff{
     overflow-x: hidden;
     object-fit: cover;
+    background-color: #CA3F3A;
 }
 
 .HomeImage{
@@ -69,13 +71,14 @@ header{
     font-family: Formula1-Bold;
     font-weight: 1000;
     font-size: 5rem;
-    color:yellow ;
+    color: #FFAE03 ;
     white-space: nowrap;
     position: absolute;
     top: 50%; 
     left: 0%;
     text-align: center;
 
+    /* maybe without the outline is best 
     outline: 3px solid red;
 }
 
