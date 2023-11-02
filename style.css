@@ -14,12 +14,12 @@
     }
 }
 
-/*general styles*/
+
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #CA3F3A;
-  overflow-x: hidden;
+    margin: 0px;
+    padding: 0px;
+    background-color: #CA3F3A;
+    overflow-x: hidden;
 }
 a {
     text-decoration: none;
@@ -107,20 +107,22 @@ section.home-page {
     font-family: Formula1-Bold;
     color: white;
     position: absolute;
-    top: 16rem;
-    white-space: nowrap;
-
-    animation: RightToLeft 8s linear infinite;
 }
-.arrow1 {
-    position: absolute;
-    bottom: 2em;
-    margin-left: 50%;
+
+.desktop{
+
+}
+
+.mobile{
+    background: url('assets/Group.jpg');
+    
+
     cursor: pointer;
 }
 
-span {
-    color: #CA3F3A;
+.HomeStuff{
+    overflow-x: hidden;
+    object-fit: cover;
 }
 
 /*2nd page styling (introduction)*/
@@ -150,23 +152,16 @@ h1.intro-concordia {
     align-self: center;
     color: white;
     font-family: Formula1-Bold;
-    font-size: 3.5rem;
-    
-}
+    font-weight: 1000;
+    font-size: 5rem;
+    color:yellow ;
+    white-space: nowrap;
+    position: absolute;
+    top: 50%; 
+    left: 0%;
+    text-align: center;
 
-p.subhead {
-    color: white;
-    margin-top: -3rem;
-    margin-right: 3rem;
-    margin-left: 3rem;
-    font-size: 1rem;
-    line-height: 1.6rem;
-    text-align: justify;
-}
-.arrow2 {
-    align-self: center;
-    margin-bottom: 2em;
-    cursor: pointer;
+    outline: 3px solid red;
 }
 
 /*PAGE 3 - SUBSYSTEMS*/
