@@ -7,19 +7,12 @@
     font-weight: bold;
     src: url("assets/Formula1-Bold.otf") format("opentype");
 }
-@keyframes RightToLeft { /*animation function for the sliding text*/
-    to {
-        transform: translateX(-51.1%);/*This weird number is where the cycle restarts
-        and is linked to the lenght of the text in index.html at line 26. */
-    }
-}
 
 /*general styles*/
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #CA3F3A;
-  overflow-x: hidden;
+  background-color: grey;
 }
 a {
     text-decoration: none;
@@ -38,7 +31,8 @@ a {
 }
 
 /*1st page styling for header*/
-header { 
+header{ 
+    background-color: grey;
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -49,7 +43,6 @@ header {
 }
 .logo1 {
     background: url('assets/logo.jpg');
-    border-radius: 15px;
     width: 8vh;
     height: 8vh;
     margin: 0.5em;
@@ -60,7 +53,7 @@ svg.menu {
     margin: 1.5em;
     cursor: pointer;
 }
-nav {
+nav.desktop-menu {
     position: fixed;
     right: 0;
     top: 0;
@@ -109,8 +102,6 @@ section.home-page {
     position: absolute;
     top: 16rem;
     white-space: nowrap;
-
-    animation: RightToLeft 8s linear infinite;
 }
 .arrow1 {
     position: absolute;
@@ -126,6 +117,7 @@ span {
 /*2nd page styling (introduction)*/
 section.intro {
     display: flex;
+    background-color: #CA3F3A;
     justify-content: space-between;
     height: 100vh;
     flex-direction: column;
@@ -142,7 +134,6 @@ section.intro {
     background-position-y: 50%;
     background-size: cover;
     z-index: -2;
-    align-self: center;
 }
 h1.intro-concordia {
     margin-top: -8rem;
@@ -153,13 +144,12 @@ h1.intro-concordia {
     font-size: 3.5rem;
     
 }
-
 p.subhead {
     color: white;
     margin-top: -3rem;
     margin-right: 3rem;
     margin-left: 3rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.6rem;
     text-align: justify;
 }
@@ -169,10 +159,10 @@ p.subhead {
     cursor: pointer;
 }
 
-/*PAGE 3 - SUBSYSTEMS*/
 section.subsystems {
     display: flex;
-    height: fit-content;
+    height: 100vh;
+    background-color: #CA3F3A;
 
     overflow-x: auto;
 }
@@ -211,146 +201,4 @@ section.subsystems {
     text-align: justify;
     font-size: 1.3rem;
     line-height: 2.2rem;
-}
-
-/*page 3 - contact area*/
-
-section.contact {
-    display: flex;
-    flex-direction: column;
-    height: fit-content;
-    align-items: center;
-
-    margin-top: 5rem;
-    margin-bottom: 2em;
-}
-.title.contact {
-    font-size: 4rem;
-}
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
-.c {
-    margin-top: 1.3em;
-    width: 33em;
-}
-.email {
-    background-color: rgb(231, 126, 126);
-    height: 2em;
-    outline: none;
-}
-.names {
-    display: flex;
-    justify-content: space-between;
-    width: 28em;
-    height: 2em;
-}
-.user-name {
-    width: 15em;
-}
-.talk {
-    background-color: rgb(231, 126, 126);
-    margin-bottom: 1.5em;
-}
-.submit {
-    width: 33em;
-    height: 2em;
-    background-color: rgb(231, 126, 126);
-}
-
-/*FOOTER PAGE 3*/
-section.footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    width: 100%;
-    height: fit-content;
-    justify-content: space-between;
-    border-top: 1.5px solid white;
-    
-}
-.socials {
-    margin-top: .8rem;
-    display: flex;
-    
-    justify-content: space-between;
-    width: 100%;
-}
-.link {
-    color: white;
-    font-size: 1em;
-}
-.credentials {
-    font-size: .8em;
-    opacity: 0.4;
-}
-
-
-
-
-/*for the burger menu*/
-@media only screen and (min-width: 680px) {
-    .menu {
-        display: none;
-    }
-
-    nav {
-        transform: translateX(0);
-        position: unset;
-        height: auto;
-        width: auto;
-        display: block;
-        background: none;
-    }
-    .close {
-        display: none;
-    }
-    ul {
-        display: flex;
-    }
-    .burger-items {
-        padding: .5em 1.5em;
-        font-size: .9rem;
-        color: #CA3F3A;
-
-        &:hover {
-            background: none;
-            text-decoration: underline;
-        }
-    }
-
-    .arrow1 {
-        display: none;
-    }
-    .arrow2 {
-        display: none;
-    }
-
-    p.subhead {
-        font-size: 1.25rem;
-    }
-}
-
-
-/*formating for the pages for desktop*/
-@media only screen and (min-width: 900px) {
-    section.intro {
-        flex-direction: row;
-        align-items: center;
-    }
-    p.subhead {
-        font-size: 1.25rem;
-    }
-}
-
-/**/
-@media only screen and (min-width: 1200px) {
-    .wrapper {
-        width: 1200px;
-        margin: 0 auto;
-    }
 }
