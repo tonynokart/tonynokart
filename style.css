@@ -8,9 +8,12 @@
     src: url("assets/Formula1-Bold.otf") format("opentype");
 }
 @keyframes RightToLeft { /*animation function for the sliding text*/
+    from {
+        transform: translateX(-33.7%);
+    }
     to {
-        transform: translateX(-51.1%);/*This weird number is where the cycle restarts
-        and is linked to the lenght of the text in index.html at line 26. */
+        transform: translateX(-67.435%);/*This weird number is where the cycle restarts
+        and is linked to the length of the text in index.html */
     }
 }
 
@@ -50,14 +53,16 @@ header {
 .logo1 {
     background: url('assets/logo.jpg');
     border-radius: 15px;
-    width: 8vh;
-    height: 8vh;
+    width: 2.7em;
+    height: 2.7em;
     margin: 0.5em;
     background-position-x: 30%;
     background-size: cover;
 }
 svg.menu {
-    margin: 1.5em;
+    width: 2.7em;
+    margin-right: 1.5em;
+
     cursor: pointer;
 }
 nav {
@@ -76,7 +81,7 @@ ul {
     list-style-type: none;
     padding: 0;
     margin-top: 8em;
-    height: 20vh;
+    height: fit-content;
 }
 .burger-items {
     color: black;
@@ -93,7 +98,10 @@ ul {
     width: 2em;
     cursor: pointer;
 }
-
+/*.open-nav is created by some javascript when burger and close icon is clicked*/
+.open-nav {
+    transform: translateX(0%);
+}
 
 /*1st page styling, everything but the header*/
 section.home-page {
@@ -112,7 +120,7 @@ section.home-page {
 
     animation: RightToLeft 8s linear infinite;
 }
-.arrow1 {
+.arrow.one {
     position: absolute;
     bottom: 2em;
     margin-left: 50%;
@@ -153,7 +161,6 @@ h1.intro-concordia {
     font-size: 3.5rem;
     
 }
-
 p.subhead {
     color: white;
     margin-top: -3rem;
@@ -163,7 +170,7 @@ p.subhead {
     line-height: 1.6rem;
     text-align: justify;
 }
-.arrow2 {
+.arrow.two {
     align-self: center;
     margin-bottom: 2em;
     cursor: pointer;
@@ -311,6 +318,7 @@ section.footer {
     }
     ul {
         display: flex;
+        margin: 0;
     }
     .burger-items {
         padding: .5em 1.5em;
@@ -318,18 +326,16 @@ section.footer {
         color: #CA3F3A;
 
         &:hover {
-            background: none;
+            background: unset;
             text-decoration: underline;
         }
     }
 
-    .arrow1 {
-        display: none;
-    }
-    .arrow2 {
-        display: none;
-    }
+    
 
+    .intro {
+        justify-content: unset;
+    }
     p.subhead {
         font-size: 1.25rem;
     }
@@ -352,5 +358,9 @@ section.footer {
     .wrapper {
         width: 1200px;
         margin: 0 auto;
+    }
+
+    header {
+        width: 1200px;
     }
 }
