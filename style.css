@@ -204,7 +204,8 @@ section.subsystems {
     color: white;
     position: relative;
     font-family: Formula1-Bold;
-    font-size: 2rem;
+    font-size: 29px;
+    margin-top: 0em;
 }
 .frame {
     display: flex;
@@ -214,14 +215,15 @@ section.subsystems {
 }
 .card-photo {
     background-size: contain;
-    height: 12rem;
+    height: 11rem;
+    width: auto;
     border-radius: 25px;
     margin-top: -1em;
 }
 .text {
     color: white;
-    text-align: justify;
-    font-size: 1.3rem;
+    text-align: left;
+    font-size: 1.31rem;
     margin-top: -1em;
     height: fit-content;
 }
