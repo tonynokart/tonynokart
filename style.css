@@ -208,14 +208,14 @@ section.subsystems {
     margin-top: 0em;
 }
 .frame {
+    margin-top: 1.75rem;
     display: flex;
     height: 100%;
     flex-direction: column;
-    justify-content: space-around;
 }
 .card-photo {
     background-size: contain;
-    height: 11rem;
+    height: 10.5rem;
     width: auto;
     border-radius: 25px;
     margin-top: -1em;
@@ -224,7 +224,7 @@ section.subsystems {
     color: white;
     text-align: left;
     font-size: 1.31rem;
-    margin-top: -1em;
+    margin-top: 60px;
     height: fit-content;
 }
 
