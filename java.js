@@ -11,14 +11,21 @@ close.addEventListener('click', () => {
     nav.classList.remove('open-nav')
 })
 
+
+//when arrow1 or arrow2 is clicked the screen scrolls down
 const arrow1 = document.querySelector('.arrow.one');
 const arrow2 = document.querySelector('.arrow.two')
 
-//when arrow1 is clicked the screen scrolls down
 arrow1.addEventListener('click', () => {
-    window.scrollTo(0, 740) //needs fixing, moves to px coordinates not with screen size
+    window.scrollTo(0, 740) 
+})
+arrow2.addEventListener('click', () => {
+  window.scrollTo(0, 1400) 
 })
 
+
+
+//This makes header background appear white when scrolling down 20 px.
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
