@@ -62,6 +62,7 @@ header {
 svg.menu {
     width: 2.7em;
     margin-right: 1.5em;
+    color: white;
 
     cursor: pointer;
 }
@@ -180,8 +181,15 @@ p.subhead {
 }
 
 /*MEET OUR TEAMS SCROLLING TITLE (FOR DESKTOP), work in progress (neeeds to be changed in the media area*/
-.meetTeams_scrolling {
+.subsystems_title {
     display: none;
+    font-size: 4rem;
+    margin: 0;
+    font-family: Formula1-Bold;
+    color: white;
+}
+section.frame {
+    text-align: center;
 }
 
 /*PAGE 3 - SUBSYSTEMS*/
@@ -382,6 +390,10 @@ section.footer {
 
 /*formating for the pages for desktop*/
 @media only screen and (min-width: 900px) {
+    .subsystems_title {
+        display: unset;
+    }
+
     section.intro {
         flex-direction: row;
         align-items: center;

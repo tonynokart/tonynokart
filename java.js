@@ -20,7 +20,7 @@ arrow1.addEventListener('click', () => {
     window.scrollTo(0, 740) 
 })
 arrow2.addEventListener('click', () => {
-  window.scrollTo(0, 1400) 
+    window.scrollTo(0, 1400) 
 })
 
 
