@@ -181,28 +181,24 @@ p.subhead {
 }
 
 /*MEET OUR TEAMS SCROLLING TITLE (FOR DESKTOP), work in progress (neeeds to be changed in the media area*/
-.subsystems_title {
-    display: none;
-    font-size: 4rem;
-    margin: 0;
-    font-family: Formula1-Bold;
-    color: white;
-}
-section.frame {
-    text-align: center;
-}
+
 
 /*PAGE 3 - SUBSYSTEMS*/
 section.subsystems {
     display: flex;
+    flex-direction: column;
     height: fit-content;
     overflow-x: auto;
+}
+.sub_section {
+    display: flex;
 }
 .card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
+    margin-top: 2em;
     margin-left: 0.75rem;
     margin-right: 0.75rem;
     border-radius: 25px;
@@ -212,10 +208,11 @@ section.subsystems {
     height: 27.1875rem;
     flex-shrink: 0;
 }
-
+.title.subsystem {
+    display: none;
+}
 .title {
     color: white;
-    position: relative;
     font-family: Formula1-Bold;
     font-size: 29px;
     margin-top: 0em;
@@ -390,8 +387,10 @@ section.footer {
 
 /*formating for the pages for desktop*/
 @media only screen and (min-width: 900px) {
-    .subsystems_title {
+    .title.subsystem {
         display: unset;
+        font-size: 3.9rem;
+        align-self: center;
     }
 
     section.intro {
@@ -404,6 +403,13 @@ section.footer {
     p.subhead {
         font-size: 1.25rem;
     }
+
+    .arrow.two {
+        position: absolute;
+        margin-left: 49%;
+        margin-top: 45em;
+    }
+
 }
 
 /**/
