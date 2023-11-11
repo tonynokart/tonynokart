@@ -384,10 +384,24 @@ section.footer {
     }
 }
 /*for the burger menu*/
+@media only screen and (max-width: 680px) {
+    .logo1 {
+        display: none;
+    }
+    header {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    svg.menu {
+        margin: 1em;
+    }
+}
+
 @media only screen and (min-width: 680px) {
     .menu {
         display: none;
     }
+    
 
     nav {
         transform: translateX(0);
@@ -395,7 +409,7 @@ section.footer {
         height: auto;
         width: auto;
         display: block;
-        background: none;
+        background: unset;
     }
     .close {
         display: none;
@@ -455,9 +469,6 @@ section.footer {
         font-size: 1.25rem;
     }
 
-    .arrow.two {
-        
-    }
 
 }
 
