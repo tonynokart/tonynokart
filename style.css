@@ -17,6 +17,11 @@
     }
 }
 
+/*this html element makes scrolling smooth for when a button is pressed */
+html {
+    scroll-behavior: smooth;
+}
+
 /*general styles*/
 body {
   margin: 0;
