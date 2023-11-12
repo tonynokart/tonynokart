@@ -192,12 +192,14 @@ p.subhead {
 /*PAGE 3 - SUBSYSTEMS*/
 section.subsystems {
     display: flex;
+    border-radius: 25px;
     flex-direction: column;
     height: fit-content;
     overflow-x: auto;
 }
 .sub_section {
     display: flex;
+    overflow-x: auto;
 }
 .card {
     display: flex;
@@ -214,6 +216,7 @@ section.subsystems {
     height: 27.1875rem;
     flex-shrink: 0;
 }
+
 .title.subsystem {
     display: none;
 }
@@ -445,7 +448,7 @@ section.footer {
 
     /*SUBSYSTEMS REDESIGN FOR DESKTOP*/
     section.subsystems {
-        
+        background: #FFAE03;
         height: 90vh;
         justify-content: space-around;
     }
